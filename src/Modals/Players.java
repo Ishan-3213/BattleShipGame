@@ -52,8 +52,14 @@ public class Players {
         while (true) {
             System.out.print("Enter the coordinates of your "+type+" #"+index+":");
             String input = scanner.next().toUpperCase();
-            int row = input.charAt(1) - '1';
-            int col = input.charAt(0) - 'A';
+            int row,col;
+            try {
+                row = input.charAt(1) - '1';
+                col = input.charAt(0) - 'A';
+            }catch (Exception e){
+                System.out.println("sorry, coordinates outside the grid. try again.");
+                continue;
+            }
 
             if (grid.isValidPosition(row,col)) {
                 grid.setHumanElement(row,col,type);
@@ -75,8 +81,14 @@ public class Players {
             System.out.print("Position of your rocket: ");
             while (true) {
                 String input = scanner.next().toUpperCase();
-                int row = input.charAt(1) - '1';
-                int col = input.charAt(0) - 'A';
+                int row, col;
+                try {
+                    row = input.charAt(1) - '1';
+                    col = input.charAt(0) - 'A';
+                }catch (Exception e){
+                    System.out.println("sorry, coordinates outside the grid. try again.");
+                    continue;
+                }
                 if (grid.isValidAttackPosition(row,col)) {
                     if (grid.getCellType(row, col) == CellType.SHIP && !grid.getIsCalled(row,col)){
                         System.out.println("Ship hit!");
