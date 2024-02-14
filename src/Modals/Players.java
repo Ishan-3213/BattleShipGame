@@ -58,10 +58,10 @@ public class Players {
     public void increaseShipsSunk(BattleGrid grid, int row, int col){
         if (grid.getCellOwner(row, col) == CellOwner.HUMAN){
             grid.humanShipsSunk++;
-            System.out.println("HUMAN"+grid.humanShipsSunk);
+            System.out.println("Human: "+grid.humanShipsSunk);
         }else {
             grid.computerShipsSunk++;
-            System.out.println("Computer"+grid.computerShipsSunk);
+            System.out.println("Computer: "+grid.computerShipsSunk);
         }
     }
 
