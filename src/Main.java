@@ -1,9 +1,10 @@
 // -----------------------------------------------------
-// Assignment 1
+// COMP6481 Assignment 1
 // © Ishan Pansuriya, Tanmay Soni
 // Written by:
 // Ishan Pansuriya: 40232841
 // Tanmay Soni: 40240650
+// Due Date: 14th February 2024
 // -----------------------------------------------------
 import Constants.CellOwner;
 import Modals.BattleGrid;
